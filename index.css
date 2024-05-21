@@ -1,0 +1,70 @@
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: fit-content;
+  height: auto;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#result {
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.letter {
+  height: 50px;
+  width: 50px;
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 10px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: all 0.2s ease-in;
+}
+
+.letter.active {
+  border: 2px solid #666;
+  transition: all 0.2s ease-in;
+}
+
+.letter.wrong {
+  background-color: #a4aec4;
+  animation: flip 0.2s ease-in-out;
+  transition: all 0.2s ease-in;
+}
+
+.letter.misplaced {
+  background-color: #f3c237;
+  animation: flip 0.2s ease-in-out;
+  transition: all 0.2s ease-in;
+}
+
+.letter.correct {
+  background-color: #79b851;
+  animation: flip 0.2s ease-in-out;
+  transition: all 0.2s ease-in;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
